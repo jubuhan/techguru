@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary: #bc4123;
+  --secondary: #2b3452;
+}
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins";
+  background: var(--secondary);
+}
+* {
+  color: #fff;
+  margin: 0;
+}
+p {
+  margin: 20px 0;
+}
+button {
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  color: white;
+  background: var(--primary);
+  cursor: pointer;
+}
+a{
+  text-decoration: none;
+}
+/* navbar */
+header nav{
+  display: flex;
+  gap: 16px;
+  justify-content: end;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header nav h1{
+ margin-right: auto;
+ border-bottom: 3px solid var(--primary);
+ 
+} 
+header nav a{
+  text-decoration: none;
+  padding: 6px;
+  border-radius: 4px;
+
+}
+header nav a.active{
+  background: var(--primary);
+}
+
+/* page content */
+main{
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/*home*/
+.home{
+  display: flex;
+}
+.home-left{
+  width: 50%;
+  height: 100vh;
+  padding: 10px;
+}
+.home-right{
+  width: 50%;
+  height: 100vh;
+  
+}
+.home-right button{
+  width: 200px;
+  padding:15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border:2px solid #009688 ;
+  background: transparent;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  
+}
+.home-right span{
+  background: #009688;
+  width: 0;
+  height:100%;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.3s;
+}
+.home-right button:hover span{
+  width: 100%;
+
+}
+.home-right button:hover{
+  border: none;
+}
