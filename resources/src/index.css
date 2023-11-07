@@ -39,6 +39,7 @@ header nav{
 header nav h1{
  margin-right: auto;
  border-bottom: 3px solid var(--primary);
+ ;
  
 } 
 header nav a{
@@ -61,17 +62,15 @@ main{
 .home{
   display: flex;
 }
-.home-left{
-  width: 50%;
-  height: 100vh;
-  padding: 10px;
+.first-content{
+ align-items: center;
+ 
+ top: 40%;
+ left: 50%;
+ position: absolute;
+ transform: translate(-50%,-50%);
 }
-.home-right{
-  width: 50%;
-  height: 100vh;
-  
-}
-.home-right button{
+.first-content button{
   width: 200px;
   padding:15px 0;
   text-align: center;
@@ -86,7 +85,7 @@ main{
   overflow: hidden;
   
 }
-.home-right span{
+.first-content span{
   background: #009688;
   width: 0;
   height:100%;
@@ -97,10 +96,13 @@ main{
   z-index: -1;
   transition: 0.3s;
 }
-.home-right button:hover span{
+.first-content button:hover span{
   width: 100%;
 
 }
-.home-right button:hover{
+.first-content button:hover{
   border: none;
+}
+.first-content h2{
+  text-align: center;
 }
