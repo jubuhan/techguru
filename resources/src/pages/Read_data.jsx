@@ -2,6 +2,8 @@
 import { useState } from "react"
 import { db } from "../firebase_setup/firebase"
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
+import './Read_data.css';
+
 
 export default function Read_data() {
 
@@ -46,7 +48,5 @@ export default function Read_data() {
             </form>
             
         </div>
-    )
-}
-
-
+ )
+    }
