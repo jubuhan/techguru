@@ -6,6 +6,7 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import "../firebase_setup/firebase";
+import Read_data from "./Read_data";
 export default function Home() {
 const navigate = useNavigate(); 
   const signInUsingGoogle = () => {
@@ -20,6 +21,7 @@ const navigate = useNavigate();
         // The signed-in user info.
         const user = result.user;
         console.log(user);
+       const usermail=user.email;
         navigate("/create")
 
         // IdP data available using getAdditionalUserInfo(result)
@@ -55,6 +57,7 @@ const navigate = useNavigate();
       <div className="slides">
         <div className="second-content"></div>
       </div>
+      
     </div>
   );
 }

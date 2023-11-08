@@ -44,6 +44,7 @@ export default function Read_data() {
 
                 <button type="submit" onClick={submitForm}>add new blog</button>
             </form>
+            
         </div>
     )
 }
