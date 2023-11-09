@@ -1,4 +1,5 @@
 import { Link, useNavigate  } from "react-router-dom";
+import React from 'react';
 import {
   getAuth,
   getRedirectResult,
@@ -6,8 +7,9 @@ import {
   signInWithPopup,
 } from "firebase/auth";
 import "../firebase_setup/firebase";
-import Read_data from "./Read_data";
+
 export default function Home() {
+  
 const navigate = useNavigate(); 
   const signInUsingGoogle = () => {
     const provider = new GoogleAuthProvider();
@@ -21,7 +23,7 @@ const navigate = useNavigate();
         // The signed-in user info.
         const user = result.user;
         console.log(user);
-       const usermail=user.email;
+       
         navigate("/create")
 
         // IdP data available using getAdditionalUserInfo(result)

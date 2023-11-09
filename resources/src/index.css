@@ -106,3 +106,84 @@ main{
 .first-content h2{
   text-align: center;
 }
+
+.read-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color:  rgba(128, 138, 35, 0.46);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.add {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.add input, textarea {
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  border-radius: 6px;
+  width: 100%;
+  font-size: 1rem;
+}
+.add textarea{
+  height: 200px;
+  resize: none;
+}
+
+.add button {
+  background-color: #bc4123;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.add  button:hover {
+  background-color:  #2b3452;
+}
+.add button {
+  margin-right: 50px; }/* Add space to the right of the button */
+
+.add .button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;}
+/* padding-top:20px  }Position buttons at the top right */
+
+.create-container{
+  align-items: center;
+  display: block;
+  
+}
+.btn{
+  margin-top: 40px;
+  text-align: center;
+  
+}
+.btn button{
+  margin: 10px;
+}
+
+/* Add some responsiveness for smaller screens */
+@media (max-width: 600px) {
+  .read-container {
+    max-width: 50%;
+    border-radius: 0;
+  }
+}
+
+

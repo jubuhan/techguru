@@ -1,15 +1,21 @@
 
 import { useState } from "react"
-import { db } from "../firebase_setup/firebase"
+import { app, db } from "../firebase_setup/firebase"
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
+import Home from "./Home"
+import { getAuth } from "firebase/auth"
 
-export default function Read_data() {
+
+
+export default function Read_data(props) {
+  const auth = getAuth(app)
+  const user = auth.currentUser
 
     const [title, setTitle] = useState("")
     const [author, setAuthor] = useState("")
     const [domain, setDomain] = useState("")
     const [content, setContent] = useState("")
-    const [email, setEmail] = useState("")
+    const [email, setEmail] = useState(user?.email ?? "")
 
     const submitForm = async (e) => {
         e.preventDefault()
@@ -41,12 +47,10 @@ export default function Read_data() {
                 <textarea style={{color:"#000"}} value={content} onChange={(e) => setContent(e.target.value)} name="content" required ></textarea>
                 <label htmlFor="email">Email</label>
                 <input style={{color:"#000"}} value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" required />
-
+            
                 <button type="submit" onClick={submitForm}>add new blog</button>
             </form>
             
         </div>
-    )
-}
-
-
+ )
+    }
