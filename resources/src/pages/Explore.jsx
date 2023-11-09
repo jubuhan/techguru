@@ -23,10 +23,11 @@ export default function Explore() {
 
 
   return (
-    <div>
-      {lists.map(list => {
-        return <BlogList/>
-      })}
-    </div>
+    <div className="home">
+    
+
+{lists&&<BlogList blogs={lists} title="all blogs!"/>}
+
+  </div>
   )
 }
