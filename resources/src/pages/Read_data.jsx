@@ -2,8 +2,13 @@
 import { useState } from "react"
 import { app, db } from "../firebase_setup/firebase"
 import {collection, addDoc, Timestamp} from 'firebase/firestore'
+<<<<<<< HEAD
 import Home from "./Home"
 import { getAuth } from "firebase/auth"
+=======
+import './Read_data.css';
+
+>>>>>>> 9ca75a5f452870a7142b49934177d5b0433c8345
 
 
 
