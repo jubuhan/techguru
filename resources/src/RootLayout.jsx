@@ -1,7 +1,7 @@
-import { NavLink,Outlet} from "react-router-dom"
 
 
-export default function RootLayout() {
+
+/*export default function RootLayout() {
   return (
     <div className="root-layout">
              <header>
@@ -16,4 +16,21 @@ export default function RootLayout() {
        <Outlet/>
     </div>
   )
+}*/
+import React from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import "./index.css"; // Import your CSS file for styling
+
+export default function RootLayout() {
+  return (
+    <div className="root-layout">
+      <header>
+        <nav>
+          <h1 className="site-name">WriteNest</h1>
+        </nav>
+      </header>
+      <main></main>
+      <Outlet />
+    </div>
+  );
 }

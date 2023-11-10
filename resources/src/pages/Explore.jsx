@@ -26,7 +26,7 @@ export default function Explore() {
     <div className="home">
     
 
-{lists&&<BlogList blogs={lists} title="all blogs!"/>}
+{lists&&<BlogList blogs={lists} title="Enjoy Millions Of Blogs At Your Fingertips!!!"/>}
 
   </div>
   )

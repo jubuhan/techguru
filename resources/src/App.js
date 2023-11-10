@@ -4,6 +4,8 @@ import RootLayout from "./RootLayout";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Explore from "./pages/Explore";
+import Blogdetail from "./Blogdetail";
+import { blogDetailsLoader } from "./pages/BLogList";
 
 
 
@@ -12,7 +14,15 @@ const router=createBrowserRouter(
     <Route path="/" element={<RootLayout/>}>
      <Route index element={<Home/>}/>
      <Route path="create" element={<Create/>}/>
-     <Route path="explore" element={<Explore/>}/>
+     <Route path="explore" element={<Explore/>}>
+     <Route 
+      path="blog"
+      element={<Blogdetail/>}
+      
+    
+      
+      />
+      </Route>
     </Route>
   )
 )

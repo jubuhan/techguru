@@ -9,6 +9,8 @@ body {
   padding: 20px;
   font-family: "Poppins";
   background: var(--secondary);
+  background-image: url(./back.png);
+  background-size: auto;
 }
 * {
   color: #fff;
@@ -111,7 +113,7 @@ main{
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
-  background-color:  rgba(128, 138, 35, 0.46);
+  background-color:  rgba(66, 82, 138, 0.46);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -186,18 +188,108 @@ main{
   }
 }
 
-
-.blog-preview{
+/* earlier code--------------------------------------------------
+/*.blog-preview{
   padding: 10px 16px;
-  margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  margin: 15px 0;
+  border-bottom: 1px solid #bc4123;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
  .blog-preview:hover{
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
  }
 
  .blog-preview h2{
   font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 8px;
- }
+  color: #bc4123;
+  margin-bottom: 2px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ }*/
+
+/*---------------------------------------------------------------
+
+
+/* Example color scheme */
+/*:root {
+  --main-bg-color: #f8f8f8;
+  --main-text-color: #333;
+  --accent-color: #bc4123;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.blog-preview {
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.blog-preview h2 {
+  color: var(--accent-color);
+}
+
+
+/*a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: color 0.3s ease; }/* Add a smooth transition for link color */
+
+
+/*a:hover {
+  color: darken(var(--accent-color), 20%);
+}*/
+
+
+
+.root-layout .blog-preview {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 10px 16px;
+  margin: 15px 0;
+  border-bottom: 1px solid #bc4123;
+  transition: box-shadow 0.3s ease; /* Add a smooth transition effect for hover */
+}
+
+/* Hover effect for blog-preview class */
+.root-layout .blog-preview:hover {
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header 2 styles within blog-preview class */
+.root-layout .blog-preview h2 {
+  font-size: 20px;
+  color: #bc4123;
+  margin-bottom: 2px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.blog-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;}
+ 
+  .blog-preview {
+    padding: 20px;
+    margin: 20px 0;
+  } 
+
+  .root-layout {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+  }
+  
+  .blog-preview h2 {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+
+
+ /* RootLayout.css----------------- to adjust the size of writenest */
+.site-name {
+  font-size: 3em; /* Adjust the size as needed */
+  /* Add any additional styles you want */
+}
