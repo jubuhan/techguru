@@ -32,15 +32,25 @@ export default function Read_data(props) {
               email:email,
               createdAt: Timestamp.now()
             })
-          } catch (err) {
+            setTitle('')
+            setAuthor('')
+            setDomain('')
+            setContent('')
+            
+
+           
+          }
+           catch (err) {
             alert(err)
           }
+        
+          
     }
 
 
     return (
         <div className="read-container">
-            <form className="add">
+            <form  className="add">
                 <label htmlFor="title">Title:</label>
                 <input style={{color:"#000"}} value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" required />
                 <label htmlFor="author">Author:</label>

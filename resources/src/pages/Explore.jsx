@@ -1,7 +1,7 @@
 import React from 'react'
 import { db } from "../firebase_setup/firebase"
 import { useState, useEffect } from 'react';
-import { collection, query, orderBy, onSnapshot } from 'firebase/firestore'
+import { collection, query, orderBy, onSnapshot, Timestamp } from 'firebase/firestore'
 import BlogList from './BLogList';
 
 
@@ -15,10 +15,11 @@ export default function Explore() {
     const unsubscribe = onSnapshot(q, (snapshot) => {
       setLists(snapshot.docs.map(doc => ({ ...doc.data(), id: doc.id })))
       //setInput("")
+      
     });
     return () => unsubscribe()
   }, [])
-
+  lists.sort((a, b) => b.createdAt - a.createdAt);
   
 
 
