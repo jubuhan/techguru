@@ -19,7 +19,7 @@ export default function Explore() {
     return () => unsubscribe()
   }, [])
 
-  console.log(lists)
+  
 
 
   return (
@@ -31,3 +31,4 @@ export default function Explore() {
   </div>
   )
 }
+
