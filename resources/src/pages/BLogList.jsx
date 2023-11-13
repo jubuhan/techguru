@@ -6,11 +6,16 @@ import { useState } from "react";
 const BlogList = ({ blogs, title }) => {
 
 
-
+const [btnvalue,setbtnvalue]=useState("see more..")
   const [isDivVisible, setDivVisible] = useState(false);
 
   const toggleDiv = () => {
     setDivVisible(!isDivVisible);
+    if(!isDivVisible){
+      setbtnvalue("see less")
+    }else{
+      setbtnvalue("see more")
+    }
     
   };
 
@@ -26,7 +31,7 @@ const BlogList = ({ blogs, title }) => {
           <div className="blog-preview" key={blog.id}>
             <h2>{blog.Title}</h2>
             <p>writen by {blog.Author}</p>
-            <button onClick={toggleDiv}>read</button>
+            <button onClick={toggleDiv}>{btnvalue}</button>
             
         
           </div>
