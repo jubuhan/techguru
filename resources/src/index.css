@@ -11,6 +11,7 @@ body {
   background: var(--secondary);
   background-image: url(./back.png);
   background-size: auto;
+  background-attachment: fixed;
 }
 * {
   color: #fff;
